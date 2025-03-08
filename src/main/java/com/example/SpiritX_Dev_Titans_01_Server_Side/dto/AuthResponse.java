@@ -7,5 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AuthResponse {
-    private String token;
+
+    private String token;      // JWT Token
+    private String message;    // Additional message (for success or error)
+    private int statusCode;    // HTTP status code (for easier error handling)
 }
