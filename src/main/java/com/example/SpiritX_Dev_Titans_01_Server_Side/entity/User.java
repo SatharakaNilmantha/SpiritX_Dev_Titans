@@ -5,14 +5,22 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Entity;
+
 @Document(collection = "users")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class User {
+    @Getter
+    @javax.persistence.Id
     @Id
-    private String id;
+    private int id;
     private String username;
     private String password;
+
+
+
 }
